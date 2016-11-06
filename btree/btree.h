@@ -17,6 +17,7 @@ typedef struct btnode *position;
 
 position search(btree root, int x);
 btree insert(btree bt, int x);
+btree btremove(btree bt, int x);
 
 #endif //__BTREE_H_
 
