@@ -100,22 +100,49 @@ int delete_min(priority_queue h)
 	h->elements[i] = last_element;
 	return min_element;
 }
-
+#if 0
 int  main()
 {
 	int i, a;
 	priority_queue h;
 
-	h = initialize(100);
-	for (i = 0; i < 10; i++) {
+	h = initialize(1000);
+	for (i = 0; i < 100; i++) {
 		a = random()%100;
 		insert(h, a);
+		printf("%d ", a);
 	}
+	printf("\n");
 
-	for (i = 0; i < 10; i++) {
+	for (i = 0; i < 100; i++) {
 		printf("%d ", delete_min(h));
 	}
+	printf("\n");
 
 	return 0;
 }
+#endif
+int main()
+{
+	int i;
+	priority_queue h;
 
+	h = initialize(1000);
+	insert(h, 13);
+	insert(h, 14);
+	insert(h, 16);
+	insert(h, 19);
+	insert(h, 21);
+	insert(h, 19);
+	insert(h, 68);
+	insert(h, 65);
+	insert(h, 26);
+	insert(h, 32);
+	insert(h, 31);
+	for (i = 0; i < 11;i++) {
+		printf("%d ", delete_min(h));
+	}
+
+	printf("\n");
+	return 0;
+}
